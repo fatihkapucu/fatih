@@ -1,28 +1,142 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yapım aşamasında </title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Ad Soyad | Uzmanlık Alanınız</title>
+<meta name="description" content="Dr. Ad Soyad — kurum adı. Yayınlar, sertifikalar ve iletişim bilgileri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f7;--ink:#14262b;--muted:#51656a;--line:#d5dfdd;--accent:#0e6b66;--card:#ffffff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1b1e;--ink:#e6efee;--muted:#9ab0b1;--line:#243639;--accent:#4cc3b8;--card:#14262a}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:58px}
+header strong{font-family:Newsreader,serif;font-size:19px}
+nav{display:flex;gap:18px;overflow-x:auto}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.hero{padding:80px 0 64px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,68px);font-weight:600;margin:10px 0 8px}
+.hero .role{font-family:Newsreader,serif;font-size:24px;color:var(--accent);margin:0 0 16px}
+.photo{aspect-ratio:4/5;width:100%;border-radius:6px;background:var(--line) center/cover;display:grid;place-items:center;color:var(--muted);font-size:14px}
+.btn{display:inline-block;margin-top:18px;padding:12px 22px;background:var(--accent);color:var(--bg);border-radius:4px;text-decoration:none;font-weight:600}
+.stats{display:flex;gap:36px;margin-top:30px}
+.stats b{display:block;font:600 34px Newsreader,serif}
+.stats span{color:var(--muted);font-size:14px}
+h2{font-size:34px;font-weight:600;margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 32px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px}
+.card h3{font-size:21px;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card small{color:var(--muted)}
+.timeline{list-style:none;padding:0;margin:28px 0 0;border-left:2px solid var(--line)}
+.timeline li{padding:0 0 22px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.timeline time{color:var(--muted);font-size:14px}
+.timeline h3{font-size:20px}
+footer{padding:36px 0;color:var(--muted);font-size:14px}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.photo{max-width:300px}section{padding:52px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
+<header><div class="wrap">
+  <strong>Dr. Ad Soyad</strong>
+  <nav aria-label="Ana menü">
+    <a href="#hakkimda">Hakkımda</a><a href="#alanlar">İlgi Alanları</a><a href="#yayinlar">Yayınlar</a><a href="#sertifikalar">Sertifikalar</a><a href="#iletisim">İletişim</a>
+  </nav>
+</div></header>
 
-    <header>
-        <h1>Yapım aşamasında </h1>
-        <p>Hoş geldiniz</p>
-    </header>
+<main>
+<div class="wrap">
+  <div class="hero" id="ana-sayfa">
+    <div>
+      <p style="margin:0;color:var(--muted)">Kurum / Hastane Adı</p>
+      <h1>Dr. Ad Soyad</h1>
+      <p class="role">Uzmanlık Alanınız</p>
+      <p>Kısa tanıtım: hangi alanda çalıştığınızı ve neye odaklandığınızı bir iki cümleyle yazın.</p>
+      <a class="btn" href="#iletisim">İletişime geç</a>
+      <div class="stats">
+        <div><b>0+</b><span>Yıl deneyim</span></div>
+        <div><b>0</b><span>Yayın</span></div>
+        <div><b>0+</b><span>Sertifika</span></div>
+      </div>
+    </div>
+    <div class="photo" role="img" aria-label="Profil fotoğrafı" style="background-image:url('foto.webp')">Fotoğraf: foto.webp</div>
+  </div>
+</div>
 
-    <main>
-        <h2>Hakkımızda</h2>
-        <p>Web sitemize hoş geldiniz.</p>
+<section id="hakkimda"><div class="wrap">
+  <h2>Hakkımda</h2>
+  <p class="lead">Mesleki yaklaşımınızı özetleyen tek cümle.</p>
+  <p style="max-width:68ch">Kendi özgeçmişinizi buraya yazın: doğum yeri, eğitim, çalıştığınız kurumlar, aldığınız eğitimler.</p>
+  <ul class="timeline">
+    <li><time>2015 – 2021</time><h3>Tıp Fakültesi</h3><p>Üniversite adı</p></li>
+    <li><time>2021 – Günümüz</time><h3>Pozisyonunuz</h3><p>Kurum adı</p></li>
+    <li><time>2024</time><h3>Uluslararası eğitim / fellowship</h3><p>Kurum ve tarih aralığı</p></li>
+  </ul>
+</div></section>
 
-        <button onclick="mesaj()">
-            Tıklayın
-        </button>
-    </main>
+<section id="alanlar"><div class="wrap">
+  <h2>İlgi Alanları</h2>
+  <p class="lead">Klinik ve akademik olarak odaklandığınız konular.</p>
+  <div class="grid">
+    <article class="card"><h3>Alan 1</h3><p>Bu alanda ne yaptığınızı kısaca açıklayın.</p></article>
+    <article class="card"><h3>Alan 2</h3><p>Bu alanda ne yaptığınızı kısaca açıklayın.</p></article>
+    <article class="card"><h3>Alan 3</h3><p>Bu alanda ne yaptığınızı kısaca açıklayın.</p></article>
+  </div>
+</div></section>
 
-    <script src="script.js"></script>
+<section id="yayinlar"><div class="wrap">
+  <h2>Yayınlar</h2>
+  <p class="lead">Hakemli dergilerde yayımlanan çalışmalarınız.</p>
+  <div class="grid">
+    <a class="card" href="https://pubmed.ncbi.nlm.nih.gov/" style="text-decoration:none;color:inherit">
+      <small>Araştırma makalesi · Şubat 2026</small>
+      <h3>Makale başlığı</h3><p>Dergi adı. Makaleye git.</p>
+    </a>
+    <a class="card" href="https://pubmed.ncbi.nlm.nih.gov/" style="text-decoration:none;color:inherit">
+      <small>Olgu sunumu · Şubat 2024</small>
+      <h3>Makale başlığı</h3><p>Dergi adı. Makaleye git.</p>
+    </a>
+  </div>
+</div></section>
+
+<section id="sertifikalar"><div class="wrap">
+  <h2>Sertifikalar</h2>
+  <p class="lead">Tamamladığınız kurs ve eğitim programları.</p>
+  <div class="grid">
+    <article class="card"><h3>Sertifika adı</h3><p>Veren kurum</p><small>Nisan 2025</small></article>
+    <article class="card"><h3>Sertifika adı</h3><p>Veren kurum</p><small>Eylül 2024</small></article>
+    <article class="card"><h3>Sertifika adı</h3><p>Veren kurum</p><small>Ocak 2026</small></article>
+  </div>
+</div></section>
+
+<section id="iletisim" style="border-bottom:0"><div class="wrap">
+  <h2>İletişim</h2>
+  <p class="lead">Akademik işbirliği, araştırma projeleri veya mesleki iletişim için yazabilirsiniz.</p>
+  <div class="grid">
+    <div class="card"><h3>E-posta</h3><p><a href="mailto:ornek@eposta.com">ornek@eposta.com</a></p></div>
+    <div class="card"><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/">linkedin.com/in/kullanici-adiniz</a></p></div>
+    <div class="card"><h3>Kurum</h3><p>Hastane / Üniversite adı, Şehir</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  © 2026 Dr. Ad Soyad. Tüm hakları saklıdır.<br>
+  Bu site yalnızca mesleki tanıtım amaçlıdır. Tanı veya tedavi amacı taşımaz.
+</div></footer>
 </body>
 </html>
